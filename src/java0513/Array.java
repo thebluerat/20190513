@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Array
 {
 
-	private int sanghyeok[][] = //왜 private int?
+	private int sanghyeok[][] = //왜 private int? - 사용자가 맵을 함부로 뚫고 다닐 수 없게 private, 안에 숫자가 있어서 int...
 	{
 				{1,1,1,1,1,1,1,1,1,1},
 				{1,0,2,0,0,0,3,3,3,1},
@@ -19,7 +19,7 @@ public class Array
 				{1,1,1,1,1,1,1,1,0,1},
 		}; //배열 만들기 - 타입, 우항을 좌항[][]에 넣기
 		
-	public void Screen(int tx, int ty) //맵 표현. tx, ty: 캐릭터 좌표. 맵 표현에 캐릭터 좌표가 들어간다! 왜 
+	public void Screen(int tx, int ty) //맵 표현. tx, ty: 캐릭터 좌표. 맵 표현에 캐릭터 좌표가 들어간다! //굳이 public 안 써도 됨. 
 	 {
 		
 		for(int y = 0; y<sanghyeok.length; y++ ) //맵 표현
@@ -52,7 +52,7 @@ public class Array
 		}
 	 }
 	
-	public void Game()
+	public void Game() //실행을 담당하는 거라서 public, 굳이 반환값을 설정할 필요가 없어서 void
 	{
 		int tx = 1;
 		int ty = 1; //캐릭터 좌표 (1,1)
@@ -98,7 +98,7 @@ public class Array
 		}
 	}
 
-    public boolean Move(int mx, int my) //Move: 움직이는 것
+    public boolean Move(int mx, int my) //Move: 움직이는 것. // 상속을 생각하면 protected 아니면 그냥 private 써도 됨
     {
     	if(sanghyeok[my][mx]==0) //0에서만 움직이게 하는 것
     	{
