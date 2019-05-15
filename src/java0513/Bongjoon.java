@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Bongjoon
 {
-	private int map[][]=
+	public int map[][]=
 	{
 			{1,1,1,1,1,1,1,1,1,1},
 			{1,0,1,0,0,0,0,0,0,1},
@@ -71,7 +71,7 @@ public class Bongjoon
 			{
 				tx = mx;
 				ty = my;
-			}else if(tx==3 && ty==3)
+			}else if(tx ==3 && ty==3)
 			{
 				tx = 1;
 				ty = 1;
